@@ -1,8 +1,8 @@
 {
-  "name": "treehouse-express-auth",
+  "name": "bringer-app",
   "version": "1.0.0",
-  "description": "A project for learning how to add authentication to a web application.",
-  "author": "Treehouse Island, Inc.",
+  "description": "An app for creating events and to aid with who is bringing each item needed.",
+  "author": "Scott Langdon",
   "private": true,
   "scripts": {
     "start": "node ./app"
