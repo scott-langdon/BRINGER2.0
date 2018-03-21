@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  .main.container.clearfix
+    .row
+      .col-md-8.col-md-offset-3
+        h1.display-4.text-center My Events
+        //-   img.avatar.img-circle.hidden-xs-down(src='/images/avatar.png', alt='avatar')
+          //- | #{name}
+        //- h2.favorite-book Email
+        //- | #{email} 
+        | #{name}
+        | #{eventName} 
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Create New Event
+        // new event form
+        form(method='POST' action='/events')
+          div.form-group
+            label(for='eventName') Name:
+            input#eventName.form-control(type='text', placeholder='Zuma Beach Party' name='eventName')
+          div.form-group
+            label(for='location') Location:
+            input#location.form-control(type='text', placeholder='Malibu' name='location')
+          div.form-group
+            label(for='host') Host:
+            input#host.form-control(type='text', placeholder='Host Name' name='host')
+          div.form-group
+            label(for='date') Date:
+            input#date1.form-control(type='text', placeholder='03/04/2018' name='date')
+          //- div.form-group
+          //-   label(for='date') Guests:
+          //-   input#date1.form-control(type='text', placeholder='Sam, Jim, Ashley, Dora' name='guests')
+          //- div.form-group
+          //-   label(for='date') Items:
+          //-   input#date1.form-control(type='text', placeholder='Chips, Salsa, Water, Guac' name='guests')
+          button.btn.btn-primary(type='submit') Create
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=", crossorigin="anonymous")
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js', integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7', crossorigin='anonymous')
+
+    script.
+        $(document).ready(function(){
+                $('#date1').datepicker({
+                  dateFormat: 'mm-dd-yy',
+                  constrainInput: false
+                });
+        });
+

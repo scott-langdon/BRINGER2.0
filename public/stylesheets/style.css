@@ -2,7 +2,7 @@
 /* Base Styles */
 
 body {
-	background: #1d2a33 url('../images/bg.jpg') no-repeat;
+	background: #1d2a33 url('../images/beach-party.jpg') no-repeat;
 	background-size: cover; 
 }
 
@@ -110,9 +110,9 @@ a:hover {
 	color: initial;
 }
 
-.favorite-book {
-  margin-top: 30px;
-}
+.shadow-text {
+	text-shadow: 0 0 3px white;
+} 
 
 /* Media Queries */
 
@@ -155,4 +155,5 @@ a:hover {
 		padding-top: 8rem;
 	}
 }
+
 
